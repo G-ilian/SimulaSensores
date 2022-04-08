@@ -11,8 +11,8 @@ class Database:
         self.db = self.clusterConnection[database]
         self.collection = self.db[collection]
 
-    def create(self, nome_sensor,valor_sensor,sensor_alarmado):
-        return self.collection.insert_one({"Sensor": nome_sensor,"Temperatura":valor_sensor,"Sensor Alarmado":sensor_alarmado})
+    def create(self, nome_sensor,valor_sensor,unidade,sensor_alarmado):
+        return self.collection.insert_one({"Sensor": nome_sensor,"Temperatura":valor_sensor,"Unidade de medida":unidade,"Sensor Alarmado":sensor_alarmado})
     
     def resetDatabase(self):
         self.db.drop_collection(self.collection)
