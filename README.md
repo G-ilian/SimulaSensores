@@ -1,7 +1,8 @@
 <h1 align ="center">Exercício Avaliativo de S202 - Simula sensores</h1>
 
-<img align="center" src="https://github.com/G-ilian/SimulaSensores/blob/main/python%2Bmongo_logo.jpg" height="300" width="500" >
-
+<p align="center">
+<img src="https://github.com/G-ilian/SimulaSensores/blob/main/python%2Bmongo_logo.jpg" height="300" width="500" >
+</p>
 
 <p>Aplicação de caráter simples desenvolvida para a disciplina de S202, para implementar os conceitos de bancos orientados a documentos</p>
 
