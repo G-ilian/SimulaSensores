@@ -6,14 +6,26 @@ from db.bancodedados import Database
 
 # Conectando com o BD
 db=Database('bancoiot','sensores')
-db.resetDatabase()
 
-# Gerar valores
+db.resetDatabase() # Usei para facilitar a visualização, caso necessário pode ser comentado
+
+# Gerar valores de acordo com o pedido
+
 def generate_values(nome,intervalo):
     while True:
+        # Valores entre 30 e 40 (ºC) gerados de forma aleatória 
         valores=random.uniform(30,40)
+        # Mostrando os dados do sensor e sua temperatura
         print(nome,valores)
-        db.create(nome,valores,'false')
+
+        #Condição de parada do armazenamento de dados
+        if(valores<38):
+            db.create(nome,valores,'ºC',False) # Valores menores que 38 ºC não alarmam o sensor
+        else:
+            db.create(nome,valores,'ºC',True)
+            print(f'Atenção! Temperatura muito alta! Verificar {nome}!') # Informando o sensor que está com alta temperatura
+            break
+
         time.sleep(intervalo)
 
 #Função usada para criar threads        
