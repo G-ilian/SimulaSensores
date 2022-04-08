@@ -41,11 +41,10 @@ pip install -r requirements.txt
 Obs: Sugiro a criação de uma venv e sua ativação para que você isole seu sistema operacional do projeto, após estar com a venv ativada execute o comando anteriormente mostrada.
 
 - :floppy_disk: Configuração do banco de dados
-A estrutura de pastas do projeto, ficou da seguinte maneira: 
+<p>A estrutura de pastas do projeto, ficou da seguinte maneira: </p>
 
 
     📂 Ex Avaliativo - Simula Sensores/
-
         📂db/
             📄bancodedados.py
         📄main.py
@@ -54,6 +53,7 @@ Para configurar seu banco de dados, acesse a pasta db, e entre no arquivo bancod
 
 # ▶️ Execução
 <p>Passado estes passos iniciais, você já pode executar o projeto para ver seu funcionamento, estando na pasta de raiz e no terminal dê o seguinte comando</p>
+
 ```
 python main.py
 ```
